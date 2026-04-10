@@ -1,0 +1,13 @@
+ul{
+  li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 5px;
+    img{
+      border: 1px solid gray;
+      padding: 5px;
+      border-radius: 3px;
+      height: 20px;
+    }
+  }
+}

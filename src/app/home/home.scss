@@ -1,0 +1,17 @@
+.banner{
+  background-image: url(/productsbanner.png);
+  background-size: cover;
+  height: 300px;
+  background-position: center right;
+  margin: 20px 0;
+}
+
+.product{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  .pImage{
+    width: 100%;
+  }
+}
