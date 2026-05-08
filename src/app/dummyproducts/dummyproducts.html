@@ -1,0 +1,33 @@
+<div class="container">
+
+  <input type="text" [(ngModel)]="title" placeholder="title"><br>
+  <input type="number" [(ngModel)]="price" placeholder="price" ><br>
+  <textarea [(ngModel)]="description" placeholder="description"></textarea><br>
+  <input type="number" [(ngModel)]="discountPercentage" placeholder="discount percentage"><br>
+  <input type="number" [(ngModel)]="stock" placeholder="stock"><br>
+  <input type="text" [(ngModel)]="image" placeholder="image"><br>
+  <input type="text" [(ngModel)]="thumbnail" placeholder="thumbnail"><br>
+
+  <br>
+  <button (click)="addProduct()">Add product</button>
+
+  <div class="row">
+
+    @for(product of products; track product.id){
+
+     <div class="col-lg-3 col-md-4 col-sm-6">
+        <a [routerLink]="[ '/dummyproducts', 'dp', product.id, convertTitle(product.title) ]">
+          <div class="productContainer">
+            <img class="pThumbnail" [src]="product.thumbnail" [alt]="product.title">
+            <h2>{{ product.title }}</h2>
+            <p class="price">{{ product.price | currency:'CAD' }}</p>
+            <p class="rating">{{ product.rating }}</p>
+            <button class="btn btn-warning">Add to cart</button>
+             | <button class="btn btn-danger" (click)="deleteProduct($event, product.id)">Delete</button>
+          </div>
+        </a>
+      </div>
+    }
+
+  </div>
+</div>

@@ -2,70 +2,16 @@
 
 <div class="productsContainer row">
 
-  <div class="col-lg-3 col-sm-6 col-md-4">
-    <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
-    </div>
-  </div>
 
+@for(product of products; track product.pPrice){
   <div class="col-lg-3 col-sm-6 col-md-4">
     <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
+        <img [src]="product.pImage" class="pImage" [alt]="product.pTitle">
+        <h3 class="pTitle">{{ product.pTitle }}</h3>
+        <p class="pDescription">{{ product.pDescription }}</p>
+        <div class="pPrice">${{ product.pPrice }}</div>
     </div>
   </div>
-
-  <div class="col-lg-3 col-sm-6 col-md-4">
-    <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-sm-6 col-md-4">
-    <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-sm-6 col-md-4">
-    <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
-    </div>
-  </div>
-
-  <div class="col-lg-3 col-sm-6 col-md-4">
-    <div class="product">
-        <img src="https://multimedia.bbycastatic.ca/multimedia/products/250x250/193/19392/19392057.jpg" class="pImage">
-        <h3 class="pTitle">Apple Max Headphones</h3>
-        <p class="pDescription">
-          Grab these technologically supreme headphones now!
-        </p>
-        <div class="pPrice">$599</div>
-    </div>
-  </div>
+}
 
 </div>
